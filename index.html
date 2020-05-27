@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<title>Generic Grocery Store</title>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <!img class ="logo" src="images/leaf-logo.png" alt="leaf" width="50" height="50">
+  <button class="tablinks" onclick="openInfo(event, 'Cart')"> <h4>Cart</h4></button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')"><h4>Products</h4></button>
+  <button class="tablinks" onclick="openInfo(event, 'Client')"><h4>Client</h4></button>
+ 
+</div>
+
+
+<h1>Generic Grocery Store</h1>
+
+	<h2>Welcome to Generic Grocery Store's official webpage!</h2>	
+	<br>
+
+	<img class = "imageBorder" src="https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/content/15/e7/47c9886840b299bd24b6e48fca6e/7.Certified-Organic-Grocery-Store_2280x1282.jpg" alt="groceries" width="900" height="432">
+
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h2>Client Information</h2>
+	<h3>Choose a Category:</h3>
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'Organic')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+    <option value="GlutenFree">Gluten-Free</option>
+	<option value="UltraGooberBaby">Vegetarian & Gluten-Free</option>
+    <option value="None">None</option>
+
+	</select>
+	
+	<br>
+		<br>
+
+	<input type="checkbox" name="oraganic" id="Organic" onchange="populateListProductChoices('dietSelect', 'displayProduct', this.id)"> <label for="checkbox">Organic Only</label></input>
+	<br>
+		<br>
+
+
+	
+</div>
+
+
+<div id="Products" class="tabcontent">
+  <h2>Your targeted products</h2>
+  <h3 id = "test">We preselected products based on your restrictions.</h3>
+	  <h3>Choose items to buy:</h3>
+	 <div id="displayProduct"></div>
+	 <br>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+		<br>
+
+	<br>
+
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h2>Your Cart</h2>
+  <h3>Here is your cart:</h3>
+  <div id="displayCart" class="displayCart"></div>
+  	<br>
+
+	<br>
+
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<div class = "footer">
+	<p class = "sig" >Site created by Alan Harris</p>	
+</div>
+
+</body>
+</html>
