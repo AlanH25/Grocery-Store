@@ -2,7 +2,9 @@
 <html>
 <head>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+		<link rel="icon" href="images/apple.png">
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -22,15 +24,15 @@
 
 
 <h1>Generic Grocery Store</h1>
-
 	<h2>Welcome to Generic Grocery Store's official webpage!</h2>	
 	<br>
 
-	<img class = "imageBorder" src="https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/content/15/e7/47c9886840b299bd24b6e48fca6e/7.Certified-Organic-Grocery-Store_2280x1282.jpg" alt="groceries" width="900" height="432">
+	<img class = "imageBorder" src="images/food.png" alt="groceries" width="810" height="389">
 
 
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
+<br>
   <h2>Client Information</h2>
 	<h3>Choose a Category:</h3>
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'Organic')">
@@ -43,11 +45,11 @@
 	</select>
 	
 	<br>
-		<br>
+	<br>
 
 	<input type="checkbox" name="oraganic" id="Organic" onchange="populateListProductChoices('dietSelect', 'displayProduct', this.id)"> <label for="checkbox">Organic Only</label></input>
 	<br>
-		<br>
+	<br>
 
 
 	
@@ -55,6 +57,7 @@
 
 
 <div id="Products" class="tabcontent">
+<br>
   <h2>Your targeted products</h2>
   <h3 id = "test">We preselected products based on your restrictions.</h3>
 	  <h3>Choose items to buy:</h3>
@@ -70,6 +73,7 @@
 </div>
 
 <div id="Cart" class="tabcontent">
+<br>
   <h2>Your Cart</h2>
   <h3>Here is your cart:</h3>
   <div id="displayCart" class="displayCart"></div>
@@ -78,6 +82,7 @@
 	<br>
 
 </div>
+
 
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>

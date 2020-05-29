@@ -8,13 +8,12 @@ body{
 }
 
 h1 {
-	font-family:'Signika', sans-serif;
+	font-family:'Lalezar';
     font-size: 80px;
-	font-weight: 700;
     color: #1d3557;
 	text-align: center;
 	margin: 0;
-	padding: 85px 0 0 0;
+	padding: 90px 0 0 0;
 }
 
 
@@ -25,7 +24,6 @@ h2 {
     color: #1d3557;
 	text-align: center;
 	margin: 0;
-	padding: 15px 0 0 0;
 }
 
 h3 {
@@ -57,7 +55,12 @@ img {
 	-webkit-transition: 1s;
     transition: 0.3s;
 }
-/*
+
+.line{
+	border:3px solid #69cbcf;
+	width: 100%;
+    border-radius: 25px;
+}/*
 .imageBorder:hover {
     border:10px solid #a8dadc;
     border-radius: 10px;
@@ -89,18 +92,19 @@ label{
 
 p.sig{
 	font-family: 'Varela Round', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     color: #457b9d;
 	text-align: right;
 }
 
 .footer {
 	float:bottom;
+	padding-right: 30px;
 	position: fixed;
-    left: 0;
+    right: 0;
     bottom: 0;
     width: 100%;
-	padding-right: 10px;
+	
 }
 
 
